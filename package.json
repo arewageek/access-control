@@ -4,12 +4,18 @@
     "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
     "hardhat": "^2.24.0"
   },
+  "keywords": [
+    "ethereum",
+    "hardhat",
+    "smart-contracts",
+    "access-control"
+  ],
   "files": [
     "contracts"
   ],
   "version": "1.0.4",
   "description": "This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.",
-  "main": "index.ts",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -25,5 +31,9 @@
   "bugs": {
     "url": "https://github.com/arewageek/access-control/issues"
   },
-  "homepage": "https://github.com/arewageek/access-control#readme"
+  "homepage": "https://github.com/arewageek/access-control#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module"
 }
