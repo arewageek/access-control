@@ -7,7 +7,7 @@
   "files": [
     "contracts"
   ],
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.",
   "main": "index.ts",
   "directories": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arewageek/access-control.git"
+    "url": "https://github.com/arewageek/access-control"
   },
   "author": "arewageek",
   "license": "MIT",
