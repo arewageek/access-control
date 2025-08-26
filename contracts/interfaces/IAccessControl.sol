@@ -7,13 +7,13 @@ interface IAccessControl {
     event RoleGranted(bytes32 indexed role, address indexed account, address indexed sender);
     event RoleRevoked(bytes32 indexed role, address indexed account, address indexed sender);
 
-    function hasRole(bytes32 role, address account) external view returns (bool);
+    function has(bytes32 role, address account) external view returns (bool);
 
-    function grantRole(bytes32 role, address account) external;
+    function grant(bytes32 role, address account) external;
 
-    function revokeRole(bytes32 role, address account) external;
+    function revoke(bytes32 role, address account) external;
 
-    function renounceRole(bytes32 role) external;
+    function renounce(bytes32 role) external;
 
     error RoleNotFound(bytes32 role);
     error RoleNotAdmin(bytes32 role, address account);

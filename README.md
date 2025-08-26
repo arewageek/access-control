@@ -14,9 +14,9 @@ Access Control is a Solidity library for implementing role-based access control 
 You can install the package using your preferred package manager:
 
 ```bash
-npm i arewageek/access-control
+npm install arewageek/access-control
 # or
-bun i arewageek/access-control
+bun add arewageek/access-control
 # or
 yarn add arewageek/access-control
 # or
@@ -30,8 +30,9 @@ To integrate `AccessControl` into your contract:
 ```solidity
 import {AccessControl} from '@arewageek/access-control/contracts/AccessControl.sol';
 
-contract Token is AccessControl {
+contract Token {
     // Your contract code here
+    AccessControl public ac;
 }
 ```
 
@@ -40,7 +41,7 @@ contract Token is AccessControl {
 Only accounts with `ADMIN_ROLE` can grant roles:
 
 ```solidity
-grantRole(MY_ROLE, _walletAddress);
+ac.grant(MY_ROLE, _walletAddress);
 ```
 
 ### Revoking Roles
@@ -48,7 +49,7 @@ grantRole(MY_ROLE, _walletAddress);
 Only accounts with ADMIN_ROLE can revoke roles:
 
 ```solidity
-revokeRole(MY_ROLE, _walletAddress);
+ac.revoke(MY_ROLE, _walletAddress);
 ```
 
 ### Renouncing Roles
@@ -56,7 +57,7 @@ revokeRole(MY_ROLE, _walletAddress);
 Any account can renounce a role it holds:
 
 ```solidity
-renounceRole(MY_ROLE);
+ac.renounce(MY_ROLE);
 ```
 
 ## Contract Details
